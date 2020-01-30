@@ -21,19 +21,20 @@ public class Exercises {
 	
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
 		// write your code here
+		ArrayList<String> empty = new ArrayList<String>();
 		if(values == null) {
-			return null;
+			return empty;
 		} else if(values.size() < n) {
-			return null;
+			return empty;
 		} else if(n < 0) {
-			return null;
+			return empty;
 		}
-		ArrayList<String> a = new ArrayList<String>(2 * n);
+		ArrayList<String> a = new ArrayList<String>();
 		for(int i = 0; i < n; i ++) {
-			a.set(i, values.get(i));
-			a.set(a.size() - i, values.get(values.size() - i));
+			a.add(i, values.get(i));
+			a.add(a.size() - i, values.get(values.size() - i));
 		}
-		return null;	// default return value to ensure compilation
+		return a;
 	}
 	
 	public int difference(ArrayList<Integer> numbers) {
