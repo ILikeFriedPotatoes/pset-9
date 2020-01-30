@@ -30,9 +30,9 @@ public class Exercises {
 			return empty;
 		}
 		ArrayList<String> a = new ArrayList<String>(2 * n);
-		for(int i = 0; i < n; i ++) {
-			a.add(i, values.get(i));
-			a.add(a.size() - i, values.get(values.size() - i));
+		for(int i = 1; i <= n; i ++) {
+			a.set(i, values.get(i));
+			a.set(a.size() - i, values.get(values.size() - i));
 		}
 		return a;
 	}
