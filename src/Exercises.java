@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Exercises {
 
-	public boolean commonEnd(ArrayList<Integer> a, ArrayList<Integer> b) {		
+	public boolean commonEnd(ArrayList<Integer> a, ArrayList<Integer> b) {
 		if (a == null || a.isEmpty() || b == null || b.isEmpty()) {
 			return false;
 		}
@@ -21,7 +21,18 @@ public class Exercises {
 	
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
 		// write your code here
-		
+		if(values == null) {
+			return null;
+		} else if(values.size() < n) {
+			return null;
+		} else if(n < 0) {
+			return null;
+		}
+		ArrayList<String> a = new ArrayList<String>(2 * n);
+		for(int i = 0; i < n; i ++) {
+			a.set(i, values.get(i));
+			a.set(a.size() - i, values.get(values.size() - i));
+		}
 		return null;	// default return value to ensure compilation
 	}
 	
