@@ -29,7 +29,7 @@ public class Exercises {
 		} else if(n < 0) {
 			return empty;
 		}
-		ArrayList<String> a = new ArrayList<String>();
+		ArrayList<String> a = new ArrayList<String>(2 * n);
 		for(int i = 0; i < n; i ++) {
 			a.add(i, values.get(i));
 			a.add(a.size() - i, values.get(values.size() - i));
