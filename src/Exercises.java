@@ -29,8 +29,9 @@ public class Exercises {
 		} else if(n < 0) {
 			return empty;
 		}
-		ArrayList<String> a = new ArrayList<String>(2 * n);
-		for(int i = 1; i <= n; i ++) {
+		ArrayList<String> a = new ArrayList<String>();
+		for(int i = 0; i < n; i ++) {
+			a.add()
 			a.set(i, values.get(i));
 			a.set(a.size() - i, values.get(values.size() - i));
 		}
