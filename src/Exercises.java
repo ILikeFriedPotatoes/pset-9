@@ -2,13 +2,20 @@ import java.util.ArrayList;
 
 public class Exercises {
 
-	public boolean commonEnd(ArrayList<Integer> a, ArrayList<Integer> b) {
+	public boolean commonEnd(ArrayList<Integer> a, ArrayList<Integer> b) {		
 		if (a == null || a.isEmpty() || b == null || b.isEmpty()) {
 			return false;
 		}
 		
 		// write your code here
-		
+		if(b.size() < 0) {
+			return false;
+		}
+		if(a.get(0) == b.get(0)) {
+			return true;
+		} else if(a.get(a.size() - 1) == b.get(b.size() - 1)) {
+			return true;
+		}
 		return false;	// default return value to ensure compilation
 	}
 	
