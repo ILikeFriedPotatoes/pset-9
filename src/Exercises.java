@@ -16,7 +16,7 @@ public class Exercises {
 		} else if(a.get(a.size() - 1) == b.get(b.size() - 1)) {
 			return true;
 		}
-		return false;	// default return value to ensure compilation
+		return false;
 	}
 	
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
@@ -31,9 +31,11 @@ public class Exercises {
 		}
 		ArrayList<String> a = new ArrayList<String>();
 		for(int i = 0; i < n; i ++) {
-			a.add()
-			a.set(i, values.get(i));
-			a.set(a.size() - i, values.get(values.size() - i));
+			a.add(values.get(i));
+		}
+		for(int i = 0; i < n; i ++) {
+			//a.add("2");
+			a.add(values.get(values.size() - n + i));	
 		}
 		return a;
 	}
