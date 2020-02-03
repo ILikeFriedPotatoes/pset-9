@@ -101,11 +101,11 @@ public class Exercises {
 			double first = numbers.get(i);
 			double middle = numbers.get(i + 1);
 			double last = numbers.get(i + 2);
-			if(first > middle || middle > last) {
-				return false;
+			if(first < middle && middle < last) {
+				return true;
 			}
 		}
-		return true;
+		return false;
 	}
 	
 	public boolean everywhere(ArrayList<Integer> values, int x) {
@@ -166,6 +166,8 @@ public class Exercises {
 				return -1;
 			}
 		}
+		
+		//checks for clumps
 		for(int i = 0; i < values.size() - 1; i ++) {
 			if(values.get(i).equals(values.get(i + 1))) {
 				clumpNum ++;
