@@ -157,8 +157,6 @@ public class Exercises {
 		// write your code here
 		if(values == null) {
 			return -1;
-		} else if(values.size() < 2) {
-			return -1;
 		}
 		int clumpNum = 0;
 		for(int i = 0; i < values.size(); i ++) {
