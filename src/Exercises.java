@@ -92,14 +92,37 @@ public class Exercises {
 
 	public boolean increasing(ArrayList<Integer> numbers) {
 		// write your code here
-		
-		return false;	// default return value to ensure compilation
+		if(numbers == null) {
+			return false;
+		} else if (numbers.size() < 1) {
+			return false;
+		}
+		for(int i = 0; i < numbers.size() - 2; i++) {
+			double first = numbers.get(i);
+			double middle = numbers.get(i + 1);
+			double last = numbers.get(i + 2);
+			if(first > middle || middle > last) {
+				return false;
+			}
+		}
+		return true;
 	}
 	
-	public boolean everywhere(ArrayList<Integer> numbers, int x) {
+	public boolean everywhere(ArrayList<Integer> values, int x) {
 		// write your code here
-		
-		return false;	// default return value to ensure compilation
+		if(values == null) {
+			return false;
+		} else if (values.size() < 1) {
+			return false;
+		}
+		for(int i = 1; i < values.size() - 1; i ++) {
+			if(values.get(i) != x) {
+				if((values.get(i - 1) != x) || (values.get(i + 1) != x)) {
+					return false;
+				}
+			}
+		}
+		return true;
 	}
 	
 	public boolean consecutive(ArrayList<Integer> numbers) {
