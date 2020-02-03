@@ -127,19 +127,52 @@ public class Exercises {
 	
 	public boolean consecutive(ArrayList<Integer> numbers) {
 		// write your code here
-		
-		return false;	// default return value to ensure compilation
+		return false;
 	}
 	
 	public boolean balance(ArrayList<Integer> numbers) {
 		// write your code here
-		
-		return false;	// default return value to ensure compilation
+		if(numbers == null) {
+			return false;
+		} else if (numbers.size() < 2) {
+			return false;
+		}
+		for(int i = 0; i < numbers.size(); i ++) {
+			int sumLeft = 0;
+			int sumRight = 0;
+			for(int j = 0; j < i; i ++) {
+				sumLeft += numbers.get(j);
+			}
+			for(int j = i; j < numbers.size(); j ++) {
+				sumRight += numbers.get(j);
+			}
+			if(sumLeft == sumRight) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public int clumps(ArrayList<String> values) {
 		// write your code here
-		
-		return -1;		// default return value to ensure compilation
+		if(values == null) {
+			return -1;
+		} else if(values.size() < 2) {
+			return -1;
+		}
+		int clumpNum = 0;
+		for(int i = 0; i < values.size(); i ++) {
+			boolean containsNull = false;
+			containsNull = (values.get(i) == null) ? true : false;
+			if(containsNull) {
+				return -1;
+			}
+		}
+		for(int i = 0; i < values.size() - 1; i ++) {
+			if(values.get(i).equals(values.get(i + 1))) {
+				clumpNum ++;
+			}
+		}
+		return clumpNum; // default return value to ensure compilation
 	}
 }
