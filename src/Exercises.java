@@ -42,8 +42,18 @@ public class Exercises {
 	
 	public int difference(ArrayList<Integer> numbers) {
 		// write your code here
-		
-		return -1;		// default return value to ensure compilation
+		if(numbers == null) {
+			return -1;
+		} else if(numbers.size() < 1) {
+			return -1;
+		}
+		int maximum = numbers.get(0);
+		int mininum = numbers.get(0);
+		for(int i = 0; i < numbers.size(); i++) {
+			maximum = (numbers.get(i) > maximum) ? numbers.get(i) : maximum;
+			mininum = (numbers.get(i) < mininum) ? numbers.get(i) : mininum;
+		}
+		return maximum - mininum;		// default return value to ensure compilation
 	}
 	
 	public double biggest(ArrayList<Double> numbers) {
