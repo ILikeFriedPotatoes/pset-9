@@ -117,7 +117,7 @@ public class Exercises {
 		}
 		for(int i = 1; i < values.size() - 1; i ++) {
 			if(values.get(i) != x) {
-				if((values.get(i - 1) != x) || (values.get(i + 1) != x)) {
+				if((values.get(i - 1) != x) && (values.get(i + 1) != x)) {
 					return false;
 				}
 			}
