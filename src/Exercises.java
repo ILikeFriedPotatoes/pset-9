@@ -153,7 +153,7 @@ public class Exercises {
 		for(int i = 0; i < numbers.size(); i ++) {
 			int sumLeft = 0;
 			int sumRight = 0;
-			for(int j = 0; j < i; i ++) {
+			for(int j = 0; j < i; j ++) {
 				sumLeft += numbers.get(j);
 			}
 			for(int j = i; j < numbers.size(); j ++) {
@@ -181,9 +181,13 @@ public class Exercises {
 		}
 		
 		//checks for clumps
+		boolean isNewClump = true; 
 		for(int i = 0; i < values.size() - 1; i ++) {
-			if(values.get(i).equals(values.get(i + 1))) {
+			if(values.get(i).equals(values.get(i + 1)) && isNewClump) {
 				clumpNum ++;
+				isNewClump = false;
+			} else if(!(values.get(i).equals(values.get(i + 1)))){
+				isNewClump = true;
 			}
 		}
 		return clumpNum; // default return value to ensure compilation
